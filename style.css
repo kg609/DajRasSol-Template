@@ -16,3 +16,29 @@ Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, fe
 /*
     Add your custom styles here
 */
+
+* {
+    color: #FFF;
+}
+
+body {
+	background: #260F54 !important;
+}
+
+.site-header {
+    background: #00848E;
+    max-width: 100% !important;
+    padding: 0 20px !important;
+}
+
+.site-branding a, .site-navigation a , .entry-title a {
+    color: #FFF;
+}
+
+.site-branding a:hover, .site-navigation a:hover, .entry-title a:hover {
+    color: #FFDF00;
+}
+
+.entry-title, .page-content p  {
+    color: #FFF;
+}
