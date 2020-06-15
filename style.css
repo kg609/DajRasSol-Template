@@ -31,6 +31,10 @@ body {
     padding: 0 20px !important;
 }
 
+.site-branding {
+    display: flex;
+}
+
 .site-branding a, .site-navigation a , .entry-title a {
     color: #FFF;
 }

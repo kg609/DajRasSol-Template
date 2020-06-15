@@ -16,7 +16,13 @@ $tagline   = get_bloginfo( 'description', 'display' );
 	<div class="site-branding">
 		<?php
 		if ( has_custom_logo() ) {
-			the_custom_logo();
+			the_custom_logo(); ?>
+			<h1 class="site-title">
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr_e( 'Home', 'hello-elementor' ); ?>" rel="home">
+					<?php echo esc_html( $site_name ); ?>
+				</a>
+			</h1>
+			<?php
 		} elseif ( $site_name ) {
 			?>
 			<h1 class="site-title">
