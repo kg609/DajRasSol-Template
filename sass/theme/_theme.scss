@@ -5,6 +5,7 @@ body {
     color: #fff;
 }
 
+// Top Navbar Styles
 #wrapper-navbar {
 
     #main-nav {
@@ -34,4 +35,24 @@ body {
         }
     }
     
+}
+
+// Home Page Styles
+#page-wrapper {
+    margin: auto;
+
+    .weekly-workouts-holder , .monthly-veggie-holder, .shop-holder {
+        text-align: center;
+        background: $primary;
+        margin: auto;
+        height: 100vh;
+        margin: 50px auto;
+    }
+
+    .shop-holder {
+
+        p {
+            text-align: left;
+        }
+    }
 }
