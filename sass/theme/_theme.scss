@@ -9,7 +9,7 @@ body {
 #wrapper-navbar {
 
     #main-nav {
-        position: fixed;
+        // position: fixed;
         width: 100%;
         z-index: 1;
     }
@@ -38,6 +38,14 @@ body {
 }
 
 // Home Page Styles
+
+#post-133 {
+
+    .entry-title {
+        display: none;
+    }
+}
+
 #page-wrapper {
     margin: auto;
 
@@ -47,9 +55,14 @@ body {
         margin: auto;
         height: 100vh;
         margin: 50px auto;
+
+        h2 {
+            padding: 20px;
+        }
     }
 
     .shop-holder {
+        height: 85vh;
 
         p {
             text-align: left;

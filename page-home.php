@@ -31,7 +31,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 				?>
         </div>
 
-        <div class="col-10 weekly-workouts-holder">
+        <!-- <div class="col-10 weekly-workouts-holder">
             <h2 class="h2"> Weekly Workouts </h2>
             <iframe class="weekly-workout-vid"  width="100%" height="500" src="https://www.youtube.com/embed/p5LvaNuwhBg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
             </iframe>
@@ -62,7 +62,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                     <p> $15.00 </p>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div><!-- #content -->
 
 </div><!-- #page-wrapper -->
