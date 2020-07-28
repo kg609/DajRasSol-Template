@@ -31,7 +31,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 				?>
         </div>
 
-        <!-- <div class="col-10 weekly-workouts-holder">
+        <div class="col-12">
+            <h1 class="text-center"> - Welcome - </h1>
+            <p class="text-center">Quote of the day</p>
+        </div>
+
+        <div class="col-10 weekly-workouts-holder">
             <h2 class="h2"> Weekly Workouts </h2>
             <iframe class="weekly-workout-vid"  width="100%" height="500" src="https://www.youtube.com/embed/p5LvaNuwhBg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
             </iframe>
@@ -40,7 +45,32 @@ $container = get_theme_mod( 'understrap_container_type' );
 
         <div class="col-10 monthly-veggie-holder">
             <h2 class="h2"> Veggie of da month </h2>
-            <p> Veggie of the month blog post. (this may be generated dynamically from the posts saved in the wp database)</p>
+            <?php
+                // Define our WP Query Parameters 
+                $query_options = array(
+                    'category_name' => 'monthly-veggie',
+                    'posts_per_page' => 1,
+                );
+                $the_query = new WP_Query( $query_options ); 
+
+                while ($the_query -> have_posts()) : $the_query -> the_post(); 
+            ?>
+
+            <!-- // Display the Post Title with Hyperlink -->
+            <div class="text-left"">
+                <h4 class="h4"> <?php the_title(); ?> </h3>
+            
+            <!-- // Display the Post Excerpt -->
+                <?php the_excerpt(__('(more…)'));  ?>
+            </div>
+
+            <!-- // Repeat the process and reset once it hits the limit -->
+            <?php
+                endwhile;
+                wp_reset_postdata();
+            ?>
+
+            <!-- <p> Veggie of the month blog post. (this may be generated dynamically from the posts saved in the wp database)</p> -->
         </div>
         
         <div class="col-10 shop-holder">
@@ -62,7 +92,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                     <p> $15.00 </p>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div><!-- #content -->
 
 </div><!-- #page-wrapper -->
